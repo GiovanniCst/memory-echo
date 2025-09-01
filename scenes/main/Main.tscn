@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyskhx7vtlmig"]
+[gd_scene load_steps=7 format=3 uid="uid://dyskhx7vtlmig"]
 
 [ext_resource type="PackedScene" uid="uid://vc3hhp2eiets" path="res://scenes/ui/HUD.tscn" id="1_b8k9j"]
 [ext_resource type="Script" uid="uid://bcyfxmsuksf4t" path="res://scenes/main/Main.gd" id="1_q24mn"]
@@ -6,10 +6,14 @@
 [ext_resource type="Script" uid="uid://duo3qa4tuant2" path="res://scripts/audio/NotePlayer.gd" id="3_np"]
 [ext_resource type="Texture2D" uid="uid://tllcqu63xjh4" path="res://static/A.jpg" id="4_bg"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dc040"]
+blend_mode = 3
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_q24mn")
 
 [node name="Background" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_dc040")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
