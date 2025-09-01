@@ -1,0 +1,17 @@
+# Godot-specific ignores
+.godot/
+*.import
+*.translation
+*.backup
+export/
+bin/
+
+# VS Code specific ignores
+.vscode/
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyskhx7vtlmig"]
+
+[ext_resource type="PackedScene" uid="uid://vc3hhp2eiets" path="res://scenes/ui/HUD.tscn" id="1_b8k9j"]
+[ext_resource type="Script" uid="uid://bcyfxmsuksf4t" path="res://scenes/main/Main.gd" id="1_q24mn"]
+[ext_resource type="PackedScene" uid="uid://b4ojofampchqe" path="res://scenes/ui/MainMenu.tscn" id="2_c9l0m"]
+[ext_resource type="Script" uid="uid://duo3qa4tuant2" path="res://scripts/audio/NotePlayer.gd" id="3_np"]
+[ext_resource type="Texture2D" uid="uid://tllcqu63xjh4" path="res://static/A.jpg" id="4_bg"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_q24mn")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -792.0
+offset_right = 1323.0
+offset_bottom = 1497.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_bg")
+expand_mode = 1
+
+[node name="GameManager" type="Node" parent="."]
+
+[node name="NotePlayer" type="Node" parent="."]
+script = ExtResource("3_np")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("1_b8k9j")]
+
+[node name="MainMenu" parent="UI" instance=ExtResource("2_c9l0m")]
+
+[node name="GameBoard" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonContainer" type="Control" parent="GameBoard"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 431.0
+offset_top = 179.0
+offset_right = 731.0
+offset_bottom = 479.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterDisplay" type="Control" parent="GameBoard"]
+layout_mode = 3
+anchors_preset = 0

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://vc3hhp2eiets"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 90.0
+offset_right = 91.0
+offset_bottom = 121.0
+text = "Score: 0"
+
+[node name="RoundLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_top = 90.0
+offset_right = 34.0
+offset_bottom = 113.0
+grow_horizontal = 2
+text = "Round: 1"
+
+[node name="LivesDisplay" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_top = 15.0
+offset_right = -52.0
+offset_bottom = 15.0
+grow_horizontal = 0
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.5
+offset_top = -98.0
+offset_right = 165.5
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press Enter (or spacebar) to start the game"
+horizontal_alignment = 1
